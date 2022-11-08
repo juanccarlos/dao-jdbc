@@ -6,25 +6,24 @@ import java.util.Objects;
 
 public class Seller implements Serializable{
 
-	private int id;
+	private Integer id;
 	private String name;
 	private String email;
 	private Date birthDate;
-	private double basesalary;
+	private double baseSalary;
 	
-	Departament departament;
+	Department department;
 	
 	public Seller () {
 	}
 
-	public Seller(int id, String name, String email, Date birthDate, double basesalary, Departament departament) {
-		super();
+	public Seller(Integer id, String name, String email, Date birthDate, double basesalary, Department departament) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.birthDate = birthDate;
-		this.basesalary = basesalary;
-		this.departament = departament;
+		this.baseSalary = basesalary;
+		this.department = departament;
 	}
 
 	public int getId() {
@@ -60,24 +59,24 @@ public class Seller implements Serializable{
 	}
 
 	public double getBasesalary() {
-		return basesalary;
+		return baseSalary;
 	}
 
 	public void setBasesalary(double basesalary) {
-		this.basesalary = basesalary;
+		this.baseSalary = basesalary;
 	}
 
-	public Departament getDepartament() {
-		return departament;
+	public Department getDepartment() {
+		return department;
 	}
 
-	public void setDepartament(Departament departament) {
-		this.departament = departament;
+	public void setDepartament(Department departament) {
+		this.department = departament;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(basesalary, birthDate, departament, email, id, name);
+		return Objects.hash(baseSalary, birthDate, department, email, id, name);
 	}
 
 	@Override
@@ -89,15 +88,15 @@ public class Seller implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Seller other = (Seller) obj;
-		return Double.doubleToLongBits(basesalary) == Double.doubleToLongBits(other.basesalary)
-				&& Objects.equals(birthDate, other.birthDate) && Objects.equals(departament, other.departament)
+		return Double.doubleToLongBits(baseSalary) == Double.doubleToLongBits(other.baseSalary)
+				&& Objects.equals(birthDate, other.birthDate) && Objects.equals(department, other.department)
 				&& Objects.equals(email, other.email) && id == other.id && Objects.equals(name, other.name);
 	}
 
 	@Override
 	public String toString() {
 		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate + ", basesalary="
-				+ basesalary + ", departament=" + departament + "]";
+				+ baseSalary + ", departament=" + department + "]";
 	}
 	
 	

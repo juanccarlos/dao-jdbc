@@ -3,7 +3,7 @@ package model.entites;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Departament implements Serializable {
+public class Department implements Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
@@ -11,10 +11,10 @@ public class Departament implements Serializable {
 	private String name ;
 	
 	
-	public Departament() {
+	public Department() {
 	}
 
-	public Departament(int id, String name) {
+	public Department(int id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -52,19 +52,13 @@ public class Departament implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Departament other = (Departament) obj;
+		Department other = (Department) obj;
 		return id == other.id;
 	}
 
 	@Override
 	public String toString() {
-		return "Departament [id=" + id + ", name=" + name + "]";
+		return "Department [id=" + id + ", name=" + name + "]";
 	}
 	
-	
-	
-	
-	
-	
-
 }
